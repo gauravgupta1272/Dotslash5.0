@@ -62,3 +62,18 @@ code {
   font-weight: 700;
   font-size: 50px;
 }
+.card{
+  margin-top: 2px;
+  max-width: 18rem; 
+  border-radius: 15px;
+}
+.colmn{
+  width: 30;
+}
+
+.start{
+  margin-left:14%;
+  /* margin-right: 100px; */
+  margin-top: 10px;
+  column-gap: 20px;
+}
