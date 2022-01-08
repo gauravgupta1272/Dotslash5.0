@@ -71,7 +71,7 @@ code {
 
 .card {
     margin-top: 2px;
-    max-width: 18rem;
+    max-width: 19rem;
     border-radius: 15px;
 }
 
@@ -84,4 +84,45 @@ code {
     /* margin-right: 100px; */
     margin-top: 10px;
     column-gap: 20px;
+}
+#display-total{
+    font-weight: 700;
+    font-size: 50px;
+  }
+  h1{
+    color: crimson;
+  }
+  .title{
+    font-size: 100px;
+    text-align: center;
+    }
+  .sym-col{
+        color: rgb(235, 0, 0);
+        font-size: 50px;
+    }
+  .gender-label{
+        color: rgb(144, 61, 240);
+        font-size:x-large;
+        font-weight:800;
+    }
+  .gender-label div{
+        color: rgb(59, 85, 97);
+        font-size: large;
+    }
+  #inputHeight,#inputWeight{
+        width:20%;
+    }
+  #bmi{
+      font-size: 5-rem;
+    }
+.final{
+    text-align: center;
+    margin-left: 650px;
+    padding: 10px;
+    letter-spacing: 1px;
+    background-color: rgb(13, 224, 13);
+    border-radius: 8px;
+    width: 110px;
+    text-decoration: none;
+    font-weight: 800;
 }

@@ -2,11 +2,31 @@ import React from "react";
 import { Card } from "./Card";
 
 export const Diet = () => {
+  let h = 0;
+  let w = 0;
+  let bmi = 0;
+  let gen = "";
+  let totalCal = 0;
+  let handleClickbmi = (e) => {
+    e.preventDefault();
+    h = document.getElementById("inputHeight").value;
+    w = document.getElementById("inputWeight").value;
+    bmi = (parseInt(w) * 10000) / (parseInt(h) * parseInt(h));
+    document.getElementById("bmi").innerHTML = `${bmi}`;
+    if (document.getElementById("inlineRadio1").checked) {
+      gen = "Male";
+    } else {
+      gen = "Female";
+    }
+    console.log(gen);
+  };
+
   let riceTitle = "Rice";
   let riceCal = 130;
   let riceCarb = "53.4gm";
   let riceVit = "B6";
   let riceFat = "0.4gm";
+  let riceId= 1;
 
   let dalTitle = "Dal";
   let dalCal = 90450;
@@ -55,8 +75,6 @@ export const Diet = () => {
   let chipsCarb = "53gm";
   let chipsVit = "C";
   let chipsFat = "37gm";
-
-
 
   let breadTitle = "Bread";
   let breadCal = 266;
@@ -112,8 +130,6 @@ export const Diet = () => {
   let sweetsVit = "C,D,A";
   let sweetsFat = "30gm";
 
-
-
   let chickenTitle = "Chicken";
   let chickenCal = 165;
   let chickenCarb = "0gm";
@@ -168,72 +184,918 @@ export const Diet = () => {
   let saladVit = "C,D,A";
   let saladFat = "0.24gm";
 
-
-
-
   return (
-      <div>
-        <Card title1={riceTitle} title2={dalTitle} title3={chapatiTitle}
-        cal1={riceCal} cal2={dalCal} cal3={chapatiCal}
-        carb1={riceCarb} carb2={dalCarb} carb3={chapatiCarb}
-        vit1={riceVit} vit2={dalVit} vit3={chapatiVit}
-        fat1={riceFat} fat2={dalFat} fat3={chapatiFat}
-        />
-        <Card title1={teaTitle} title2={coffeeTitle} title3={milkTitle}
-        cal1={teaCal} cal2={coffeeCal} cal3={milkCal}
-        carb1={teaCarb} carb2={coffeeCarb} carb3={milkCarb}
-        vit1={teaVit} vit2={coffeeVit} vit3={milkVit}
-        fat1={teaFat} fat2={coffeeFat} fat3={milkFat}
-        />
-        <Card title1={noodlesTitle} title2={pastaTitle} title3={chipsTitle}
-        cal1={noodlesCal} cal2={pastaCal} cal3={chipsCal}
-        carb1={noodlesCarb} carb2={pastaCarb} carb3={chipsCarb}
-        vit1={noodlesVit} vit2={pastaVit} vit3={chipsVit}
-        fat1={noodlesFat} fat2={pastaFat} fat3={chipsFat}
-        />
+    <div>
+      <h1 className="m-4 p-2 display-5 title text-decoration-wavy">
+        Diet Plan
+      </h1>
 
-        <Card title1={breadTitle} title2={pizzaTitle} title3={burgerTitle}
-        cal1={breadCal} cal2={pizzaCal} cal3={burgerCal}
-        carb1={breadCarb} carb2={pizzaCarb} carb3={burgerCarb}
-        vit1={breadVit} vit2={pizzaVit} vit3={burgerVit}
-        fat1={breadFat} fat2={pizzaFat} fat3={burgerFat}
-        />
-        <Card title1={appleTitle} title2={orangeTitle} title3={bananaTitle}
-        cal1={appleCal} cal2={orangeCal} cal3={bananaCal}
-        carb1={appleCarb} carb2={orangeCarb} carb3={bananaCarb}
-        vit1={appleVit} vit2={orangeVit} vit3={bananaVit}
-        fat1={appleFat} fat2={orangeFat} fat3={bananaFat}
-        />
-        <Card title1={curdTitle} title2={paneerTitle} title3={sweetsTitle}
-        cal1={curdCal} cal2={paneerCal} cal3={sweetsCal}
-        carb1={curdCarb} carb2={paneerCarb} carb3={sweetsCarb}
-        vit1={curdVit} vit2={paneerVit} vit3={sweetsVit}
-        fat1={curdFat} fat2={paneerFat} fat3={sweetsFat}
-        />
-        <Card title1={cabbageTitle} title2={chickenTitle} title3={eggTitle}
-        cal1={cabbageCal} cal2={chickenCal} cal3={eggCal}
-        carb1={cabbageCarb} carb2={chickenCarb} carb3={eggCarb}
-        vit1={cabbageVit} vit2={chickenVit} vit3={eggVit}
-        fat1={cabbageFat} fat2={chickenFat} fat3={eggFat}
-        />
-        <Card title1={fishTitle} title2={muttonTitle} title3={pomoTitle}
-        cal1={fishCal} cal2={muttonCal} cal3={pomoCal}
-        carb1={fishCarb} carb2={muttonCarb} carb3={pomoCarb}
-        vit1={fishVit} vit2={muttonVit} vit3={pomoVit}
-        fat1={fishFat} fat2={muttonFat} fat3={pomoFat}
-        />
-        <Card title1={potatoTitle} title2={cdTitle} title3={saladTitle}
-        cal1={potatoCal} cal2={cdCal} cal3={saladCal}
-        carb1={potatoCarb} carb2={cdCarb} carb3={saladCarb}
-        vit1={potatoVit} vit2={cdVit} vit3={saladVit}
-        fat1={potatoFat} fat2={cdFat} fat3={saladFat}
-        />
+      <div className="m-2 p-2 container-fluid">
+        <section className="">
+          <label htmlFor="gender" className="form-label gender-label">
+            Select your gender
+          </label>
+          <span>
+            <div className="form-check form-check-inline gender-sel mx-2">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio1"
+                value="male"
+              />
+              <label className="form-check-label" htmlFor="inlineRadio1">
+                Male
+              </label>
+            </div>
+            <div className="form-check form-check-inline mx-2">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio2"
+                value="female"
+              />
+              <label className="form-check-label" htmlFor="inlineRadio2">
+                Female
+              </label>
+            </div>
+          </span>
+        </section>
 
-        
+        <p>
+          <label htmlFor="gender" className="form-label gender-label">
+            Select your Age group
+            <select
+              className="input-group form-select gender my-2"
+              id="inputGroupSelect04"
+              aria-label="Example select with button addon"
+            >
+              <option value="l18">Below 18</option>
+              <option value="18-60">Between 18 to 60</option>
+              <option value="g60">Above 60</option>
+            </select>
+          </label>
+        </p>
+      </div>
 
-        
-    
-    
+      <div className="m-1 row gender-label">
+        <label htmlFor="inputHeight" className="col-lg-2 col-form-label">
+          Height(in cm)
+        </label>
+        <div className="col-sm-10">
+          <input type="number" className="form-control" id="inputHeight" />
+        </div>
+      </div>
+      <div className="m-1 row gender-label">
+        <label htmlFor="inputWeight" className="col-sm-2 col-form-label">
+          Weight(in kg)
+        </label>
+        <div className="col-sm-10">
+          <input type="number" className="form-control" id="inputWeight" />
+        </div>
+      </div>
+      <div className="m-1 row gender-label">
+        <label htmlFor="inputWeight" className="col-sm-2 col-form-label">
+          Your BMI is:
+        </label>
+        <span className="col-xl-10" id="bmi">
+          0
+        </span>
+      </div>
+
+      {/* Image and food items  */}
+      <div className="d-img mb-3">
+        <div className="row">
+          <div className="col-md-6 offset-md-3">
+            <img
+              src="https://media.istockphoto.com/photos/classic-thai-food-dishes-picture-id1312283557?b=1&k=20&m=1312283557&s=170667a&w=0&h=hXAmitFiH9z0mK3GZdMDbkkcSl8Em84LIIlkHnVhpPE="
+              className="card-img-top"
+              width="2rem"
+              height="500rem"
+              alt="Error image Loading!!"
+              m="10,20,30,40"
+            />
+            <div className="card-body"></div>
+          </div>
+        </div>
+      </div>
+      
+      {/* first */}
+      <div className="row align-items start">
+      <div class="card border-primary mb-3 col details">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">130</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>53.4gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">90450</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>10.18gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B2, B6, B9, D2</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>3.24gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">104</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>15.17gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B, E</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+
+  {/* second */}
+  <div className="row align-items start">
+      <div class="card border-primary mb-3 col details">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">130</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>53.4gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">90450</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>10.18gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B2, B6, B9, D2</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>3.24gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">104</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>15.17gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B, E</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {/* third */}
+    <div className="row align-items start">
+      <div class="card border-primary mb-3 col details">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">130</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>53.4gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">90450</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>10.18gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B2, B6, B9, D2</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>3.24gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">104</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>15.17gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B, E</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {/* forth */}
+    <div className="row align-items start">
+      <div class="card border-primary mb-3 col details">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">130</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>53.4gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">90450</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>10.18gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B2, B6, B9, D2</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>3.24gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">104</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>15.17gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B, E</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {/* five */}
+    <div className="row align-items start">
+      <div class="card border-primary mb-3 col details">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">130</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>53.4gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">90450</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>10.18gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B2, B6, B9, D2</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>3.24gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">104</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>15.17gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B, E</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {/* six */}
+    <div className="row align-items start">
+      <div class="card border-primary mb-3 col details">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">130</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>53.4gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">90450</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>10.18gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B2, B6, B9, D2</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>3.24gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">104</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>15.17gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B, E</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {/* seventh */}
+    <div className="row align-items start">
+      <div class="card border-primary mb-3 col details">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">130</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>53.4gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">90450</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>10.18gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B2, B6, B9, D2</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>3.24gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">104</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>15.17gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B, E</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {/* eigth */} <div className="row align-items start">
+      <div class="card border-primary mb-3 col details">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">130</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>53.4gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">90450</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>10.18gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B2, B6, B9, D2</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>3.24gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">104</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>15.17gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B, E</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {/* nine */}
+    <div className="row align-items start">
+      <div class="card border-primary mb-3 col details">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">130</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>53.4gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">90450</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>10.18gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B2, B6, B9, D2</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>3.24gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">104</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>15.17gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B, E</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>0.4gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <br />
+     <a className="final" onClick={handleClickbmi}>SUBMIT</a>
+  
+     <br />
     </div>
   );
 };
