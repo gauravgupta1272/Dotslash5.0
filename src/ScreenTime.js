@@ -31,16 +31,24 @@ export const ScreenTime = () => {
 
     total = parseInt(mp) + parseInt(pc) + parseInt(tv) + parseInt(oth);
     if(total<5){
-      document.getElementById('suggestion-blogs').innerHTML = "Huraayy !!!! You Are A Champion "
+      document.getElementById('suggestion-blogs-title').innerHTML = "<h3>Huraayy !!!! You Are A Champion</h3> "
+      document.getElementById('suggestion-blogs').innerHTML = "<h5>Your Screen time is below the limit, You use your devices wisely.<br> Make sure to maintain your screen time. Good Luck!!! </h5>"
+
     }
     else if(total>=5 && total<8){
-      document.getElementById('suggestion-blogs').innerHTML = "You Are Habitual"
+      document.getElementById('suggestion-blogs-title').innerHTML = "<h3>You Are Habitual</h3>"
+      document.getElementById('suggestion-blogs').innerHTML = "<h5>Your screens are your daily companions, and has so become your Habit. <br>This much screen time can damange your Eyesight if you don't take breaks in between.<br> Try to take breaks for 10minutes after every hour. </h5>"
+
     }
     else if(total>=8 && total<12){
-      document.getElementById('suggestion-blogs').innerHTML = "You Are Obsessed"
+      document.getElementById('suggestion-blogs-title').innerHTML = "<h3>You Are Obsessed!!!</h3>"
+      document.getElementById('suggestion-blogs').innerHTML = "<h5>Your screens seems to be on your mind at most times.<br> Your Screen time is very high. It will surely damange your Eyes. Try to reduce it by 3 to 4 hours</h5>"
+
     }
     else{
-      document.getElementById('suggestion-blogs').innerHTML = "You Are Addicted"
+      document.getElementById('suggestion-blogs-title').innerHTML = "<h3>You Are Addicted !!!</h3>"
+      document.getElementById('suggestion-blogs').innerHTML = "<h5>You seem to mentally and physically devoted to you screens in a way that <br>if your screens are not within your sight, you grow anxious.<br> Avoid this much screen it will be very bad for your mental health.</h5>"
+
     }
   };
   return (
@@ -131,6 +139,7 @@ export const ScreenTime = () => {
       <div className="card suggestions" >
        <h3>Your Total Screen Time is </h3> (in hours)
           <div className="card-body" id="display-total"></div>
+      <div id="suggestion-blogs-title"></div>
       <div id="suggestion-blogs"></div>
       </div>
     </div>

@@ -4,7 +4,7 @@
 import {BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import { Navbar } from "./Navbar";
 import { Home } from "./Home";
-import {Schedule} from "./Schedule";
+
 import { ScreenTime } from "./ScreenTime";
 import { Diet } from "./Diet";
 
@@ -17,9 +17,7 @@ function App() {
           <Route exact path='/'>
             <Home/>
           </Route>
-          <Route exact path='/schedule'>
-            <Schedule/>
-          </Route>
+          
           <Route exact path= '/screentime'>
             <ScreenTime/>
           </Route>
