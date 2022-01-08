@@ -1,15 +1,18 @@
 import React from "react";
-import {logo} from "./logo.png"
+
+import logo from './logo.png';
+
 export const Navbar = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg  bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand heading" href="/">
-            SELFISH
+      <nav className="navbar navbar-expand-lg  bg-dark">
+        <div className="container-fluid">
+          <a className="navbar-brand heading" href="/">
+          <img id="main-logo" src={logo} alt="hola" />
+            thriveYou
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -17,22 +20,22 @@ export const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active components" aria-current="page" href="/schedule">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active components" aria-current="page" href="/schedule">
                   SCHEDULE &nbsp;
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active components" aria-current="page" href="/screentime">
+              <li className="nav-item">
+                <a className="nav-link active components" aria-current="page" href="/screentime">
                   SCREEN TIME &nbsp;
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active components" aria-current="page" href="/diet">DIET &nbsp;</a>
+              <li className="nav-item">
+                <a className="nav-link active components" aria-current="page" href="/diet">DIET &nbsp;</a>
               </li>
             </ul>
           </div>
