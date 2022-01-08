@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "./Card";
 
 export const Diet = () => {
   let h = 0;
@@ -377,28 +376,28 @@ export const Diet = () => {
   <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Salad</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">130</th>
+                <th scope="col">17</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>53.4gm</td>
+                <td>2.9gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B6</td>
+                <td>A,C,D</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>0.24gm</td>
               </tr>
             </tbody>
           </table>
@@ -406,28 +405,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Tea</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">90450</th>
+                <th scope="col">10</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>10.18gm</td>
+                <td>0.2gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B2, B6, B9, D2</td>
+                <td>---</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>3.24gm</td>
+                <td>0</td>
               </tr>
             </tbody>
           </table>
@@ -435,28 +434,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Coffee</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">104</th>
+                <th scope="col">31</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>15.17gm</td>
+                <td>0</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B, E</td>
+                <td>---</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>0</td>
               </tr>
             </tbody>
           </table>
@@ -467,78 +466,20 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Bread</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">130</th>
+                <th scope="col">266</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>53.4gm</td>
-              </tr>
-              <tr>
-                <td>Vitamin</td>
-                <td>B6</td>
-              </tr>
-              <tr>
-                <td>Fat</td>
-                <td>0.4gm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="card border-primary mb-3 col">
-        <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
-        </div>
-        <div class="card-body text-primary">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Calories</th>
-                <th scope="col">90450</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Carbohydrate</td>
-                <td>10.18gm</td>
-              </tr>
-              <tr>
-                <td>Vitamin</td>
-                <td>B2, B6, B9, D2</td>
-              </tr>
-              <tr>
-                <td>Fat</td>
-                <td>3.24gm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="card border-primary mb-3 col">
-        <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
-        </div>
-        <div class="card-body text-primary">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Calories</th>
-                <th scope="col">104</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Carbohydrate</td>
-                <td>15.17gm</td>
+                <td>49gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
@@ -546,7 +487,65 @@ export const Diet = () => {
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>3.2gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Noodles</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">137</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>25gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>2.06gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Pasta</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">131</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>25gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>2gm</td>
               </tr>
             </tbody>
           </table>
@@ -557,20 +556,49 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Milk</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">130</th>
+                <th scope="col">496</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>53.4gm</td>
+                <td>38.42gm</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>A,C,D</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>26.71gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Curd</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">98</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>3.4gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
@@ -578,7 +606,7 @@ export const Diet = () => {
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>4.3gm</td>
               </tr>
             </tbody>
           </table>
@@ -586,57 +614,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chips</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">90450</th>
+                <th scope="col">547</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>10.18gm</td>
+                <td>53gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B2, B6, B9, D2</td>
+                <td>C</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>3.24gm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="card border-primary mb-3 col">
-        <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
-        </div>
-        <div class="card-body text-primary">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Calories</th>
-                <th scope="col">104</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Carbohydrate</td>
-                <td>15.17gm</td>
-              </tr>
-              <tr>
-                <td>Vitamin</td>
-                <td>B, E</td>
-              </tr>
-              <tr>
-                <td>Fat</td>
-                <td>0.4gm</td>
+                <td>37gm</td>
               </tr>
             </tbody>
           </table>
@@ -647,28 +646,28 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Cold Drink</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">130</th>
+                <th scope="col">37</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>53.4gm</td>
+                <td>9.56gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B6</td>
+                <td>---</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>0.02gm</td>
               </tr>
             </tbody>
           </table>
@@ -676,28 +675,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Chicken</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">90450</th>
+                <th scope="col">165</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>10.18gm</td>
+                <td>---</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B2, B6, B9, D2</td>
+                <td>B6, E</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>3.24gm</td>
+                <td>3.6gm</td>
               </tr>
             </tbody>
           </table>
@@ -705,28 +704,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Egg</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">104</th>
+                <th scope="col">131</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>15.17gm</td>
+                <td>---</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B, E</td>
+                <td>B2</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>9gm</td>
               </tr>
             </tbody>
           </table>
@@ -737,20 +736,49 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Fish</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">130</th>
+                <th scope="col">206</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>53.4gm</td>
+                <td>---</td>
+              </tr>
+              <tr>
+                <td>Vitamin</td>
+                <td>B6,C</td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td>12gm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card border-primary mb-3 col">
+        <div class="card-header ">
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Mutton</h2>
+        </div>
+        <div class="card-body text-primary">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Calories</th>
+                <th scope="col">294</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carbohydrate</td>
+                <td>---</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
@@ -758,7 +786,7 @@ export const Diet = () => {
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>21gm</td>
               </tr>
             </tbody>
           </table>
@@ -766,57 +794,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Pizza</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">90450</th>
+                <th scope="col">266</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>10.18gm</td>
+                <td>33gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B2, B6, B9, D2</td>
+                <td>---</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>3.24gm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="card border-primary mb-3 col">
-        <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
-        </div>
-        <div class="card-body text-primary">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Calories</th>
-                <th scope="col">104</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Carbohydrate</td>
-                <td>15.17gm</td>
-              </tr>
-              <tr>
-                <td>Vitamin</td>
-                <td>B, E</td>
-              </tr>
-              <tr>
-                <td>Fat</td>
-                <td>0.4gm</td>
+                <td>10gm</td>
               </tr>
             </tbody>
           </table>
@@ -827,28 +826,28 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Burger</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">130</th>
+                <th scope="col">295</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>53.4gm</td>
+                <td>24gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B6</td>
+                <td>---</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>35gm</td>
               </tr>
             </tbody>
           </table>
@@ -856,28 +855,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Sweets</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">90450</th>
+                <th scope="col">500</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>10.18gm</td>
+                <td>40gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B2, B6, B9, D2</td>
+                <td>A,C,D</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>3.24gm</td>
+                <td>30gm</td>
               </tr>
             </tbody>
           </table>
@@ -885,28 +884,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Apple</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">104</th>
+                <th scope="col">52</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>15.17gm</td>
+                <td>14gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B, E</td>
+                <td>B6,C,K</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>0.2gm</td>
               </tr>
             </tbody>
           </table>
@@ -916,28 +915,28 @@ export const Diet = () => {
     {/* eigth */} <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Orange</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">130</th>
+                <th scope="col">47</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>53.4gm</td>
+                <td>12gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B6</td>
+                <td>A,C</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>0.1gm</td>
               </tr>
             </tbody>
           </table>
@@ -945,28 +944,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Banana</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">90450</th>
+                <th scope="col">84</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>10.18gm</td>
+                <td>23gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B2, B6, B9, D2</td>
+                <td>C,B6</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>3.24gm</td>
+                <td>0.3gm</td>
               </tr>
             </tbody>
           </table>
@@ -974,28 +973,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Pomogranate</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">104</th>
+                <th scope="col">83</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>15.17gm</td>
+                <td>14gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B, E</td>
+                <td>C, K</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>1gm</td>
               </tr>
             </tbody>
           </table>
@@ -1006,28 +1005,28 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Paneer</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">130</th>
+                <th scope="col">296</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>53.4gm</td>
+                <td>4.5gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B6</td>
+                <td>B12, D</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>22gm</td>
               </tr>
             </tbody>
           </table>
@@ -1035,28 +1034,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Potato</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">90450</th>
+                <th scope="col">87</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>10.18gm</td>
+                <td>17gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B2, B6, B9, D2</td>
+                <td>B1, B3, B6, C</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>3.24gm</td>
+                <td>0gm</td>
               </tr>
             </tbody>
           </table>
@@ -1064,28 +1063,28 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Cabbage</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">Calories</th>
-                <th scope="col">104</th>
+                <th scope="col">25</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Carbohydrate</td>
-                <td>15.17gm</td>
+                <td>6gm</td>
               </tr>
               <tr>
                 <td>Vitamin</td>
-                <td>B, E</td>
+                <td>B6,C,K</td>
               </tr>
               <tr>
                 <td>Fat</td>
-                <td>0.4gm</td>
+                <td>0.1gm</td>
               </tr>
             </tbody>
           </table>
