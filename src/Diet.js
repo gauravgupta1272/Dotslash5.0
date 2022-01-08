@@ -6,7 +6,9 @@ export const Diet = () => {
   let bmi = 0;
   let gen = "";
   let totalCal = 0;
-  let handleClickbmi = (e) => {
+  
+  const calcCal= (e)=>
+  {
     e.preventDefault();
     h = document.getElementById("inputHeight").value;
     w = document.getElementById("inputWeight").value;
@@ -18,170 +20,106 @@ export const Diet = () => {
       gen = "Female";
     }
     console.log(gen);
-  };
+    if(document.getElementById("1").checked){
+      totalCal+=242;
+    }
+    if(document.getElementById("2").checked){
+    totalCal+=90.45;
+    }
+    if(document.getElementById("3").checked){
+    totalCal+=104;
+    }
+    if(document.getElementById("4").checked){
+    totalCal+=17;
+    }
+    if(document.getElementById("5").checked){
+    totalCal+=10;
+    }
+    if(document.getElementById("6").checked){
+    totalCal+=31;
+    }
+    if(document.getElementById("7").checked){
+    totalCal+=266;
+    }
+    if(document.getElementById("8").checked){
+    totalCal+=137;
+    }
+    if(document.getElementById("9").checked){
+    totalCal+=131;
+    }
+    if(document.getElementById("10").checked){
+    totalCal+=496;
+    }
+    if(document.getElementById("11").checked){
+    totalCal+=98;
+    }
+    if(document.getElementById("12").checked){
+    totalCal+=547;
+    }
+    if(document.getElementById("13").checked){
+    totalCal+=37;
+    }
+    if(document.getElementById("14").checked){
+    totalCal+=165;
+    }
+    if(document.getElementById("15").checked){
+    totalCal+=131;
+    }
+    if(document.getElementById("16").checked){
+    totalCal+=206;
+    }
+    if(document.getElementById("17").checked){
+    totalCal+=294;
+    }
+    if(document.getElementById("18").checked){
+    totalCal+=266;
+    }
+    if(document.getElementById("19").checked){
+    totalCal+=295;
+    }
+    if(document.getElementById("20").checked){
+    totalCal+=500;
+    }
+    if(document.getElementById("21").checked){
+    totalCal+=52;
+    }
+    if(document.getElementById("22").checked){
+    totalCal+=47;
+    }
+    if(document.getElementById("23").checked){
+    totalCal+=84;
+    }
+    if(document.getElementById("24").checked){
+    totalCal+=83;
+    }
+    if(document.getElementById("25").checked){
+    totalCal+=296;
+    }
+    if(document.getElementById("26").checked){
+    totalCal+=87;
+    }
+    if(document.getElementById("27").checked){
+     totalCal+=25;
+    }
+    console.log(totalCal);
+    document.getElementById('final-calorie').innerHTML = `Total Calorie Intake: ${totalCal}`;
+    if(gen==="Male" && totalCal>=2500){
+ document.getElementById('final-suggestions').innerHTML = "<h1>OHHH NOOO !!!</h1><p>1. Cook your own food <br/> 2. Don’t keep junk food in the house<br/>3. Use smaller plates<br/>4. Bulk up meals with vegetables<br/>5. Have a low-calorie starter <br/>6. Eat your meals slowly<br/>7. Eat without distractions<br/>8. Don’t touch the bread basket<br/>9. Eat whole fruits<br/>10. Try intermittent fasting</p>";
+    }
+    else if(gen==="Female" && totalCal>=2000){
+ document.getElementById('final-suggestions').innerHTML = "<h1>OHHH NOOO !!!</h1><p>1. Cook your own food <br/> 2. Don’t keep junk food in the house<br/>3. Use smaller plates<br/>4. Bulk up meals with vegetables<br/>5. Have a low-calorie starter <br/>6. Eat your meals slowly<br/>7. Eat without distractions<br/>8. Don’t touch the bread basket<br/>9. Eat whole fruits<br/>10. Try intermittent fasting</p>";
+    
+    }
+    else{
+    document.getElementById('final-suggestions').innerHTML = 'NICE!!!!! You are having good diet plan!';
+    }
+  }
+  
 
-  let riceTitle = "Rice";
-  let riceCal = 130;
-  let riceCarb = "53.4gm";
-  let riceVit = "B6";
-  let riceFat = "0.4gm";
-  let riceId= 1;
+// to cal the things
 
-  let dalTitle = "Dal";
-  let dalCal = 90450;
-  let dalCarb = "10.18gm";
-  let dalVit = "B2, B6, B9, D2";
-  let dalFat = "3.24gm";
 
-  let chapatiTitle = "Chapati";
-  let chapatiCal = 104;
-  let chapatiCarb = "15.17gm";
-  let chapatiVit = "B, E";
-  let chapatiFat = "0.4gm";
-
-  let teaTitle = "Tea";
-  let teaCal = 10;
-  let teaCarb = "0.2gm";
-  let teaVit = "-";
-  let teaFat = "0";
-
-  let coffeeTitle = "Coffee";
-  let coffeeCal = 31;
-  let coffeeCarb = "0gm";
-  let coffeeVit = "-";
-  let coffeeFat = "0gm";
-
-  let milkTitle = "Milk";
-  let milkCal = 496;
-  let milkCarb = "38.42gm";
-  let milkVit = "C,D,A";
-  let milkFat = "26.71gm";
-
-  let noodlesTitle = "Noodles";
-  let noodlesCal = 137;
-  let noodlesCarb = "25gm";
-  let noodlesVit = "B";
-  let noodlesFat = "2.06";
-
-  let pastaTitle = "Pasta";
-  let pastaCal = 131;
-  let pastaCarb = "25gm";
-  let pastaVit = "B";
-  let pastaFat = "2gm";
-
-  let chipsTitle = "Chips";
-  let chipsCal = 547;
-  let chipsCarb = "53gm";
-  let chipsVit = "C";
-  let chipsFat = "37gm";
-
-  let breadTitle = "Bread";
-  let breadCal = 266;
-  let breadCarb = "49gm";
-  let breadVit = "B,E";
-  let breadFat = "3.2gm";
-
-  let pizzaTitle = "Pizza";
-  let pizzaCal = 266;
-  let pizzaCarb = "33gm";
-  let pizzaVit = "-";
-  let pizzaFat = "10gm";
-
-  let burgerTitle = "Burger";
-  let burgerCal = 295;
-  let burgerCarb = "24gm";
-  let burgerVit = "-";
-  let burgerFat = "35gm";
-
-  let appleTitle = "Apple";
-  let appleCal = 52;
-  let appleCarb = "14gm";
-  let appleVit = "C,K,B6";
-  let appleFat = "0.2";
-
-  let orangeTitle = "Orange";
-  let orangeCal = 47;
-  let orangeCarb = "12gm";
-  let orangeVit = "A,C";
-  let orangeFat = "0.1gm";
-
-  let bananaTitle = "Banana";
-  let bananaCal = 89;
-  let bananaCarb = "23gm";
-  let bananaVit = "C,B6";
-  let bananaFat = "0.3gm";
-
-  let curdTitle = "Curd";
-  let curdCal = 98;
-  let curdCarb = "3.4gm";
-  let curdVit = "B6";
-  let curdFat = "24.3";
-
-  let paneerTitle = "Paneer";
-  let paneerCal = 296;
-  let paneerCarb = "4.5gm";
-  let paneerVit = "B12,D";
-  let paneerFat = "22gm";
-
-  let sweetsTitle = "Sweets";
-  let sweetsCal = 500;
-  let sweetsCarb = "40gm";
-  let sweetsVit = "C,D,A";
-  let sweetsFat = "30gm";
-
-  let chickenTitle = "Chicken";
-  let chickenCal = 165;
-  let chickenCarb = "0gm";
-  let chickenVit = "E,B6";
-  let chickenFat = "3.6gm";
-
-  let eggTitle = "Egg";
-  let eggCal = 131;
-  let eggCarb = "-";
-  let eggVit = "B2";
-  let eggFat = "9gm";
-
-  let fishTitle = "Fish";
-  let fishCal = 206;
-  let fishCarb = "";
-  let fishVit = "B6,C";
-  let fishFat = "12gm";
-
-  let muttonTitle = "Mutton";
-  let muttonCal = 294;
-  let muttonCarb = "-";
-  let muttonVit = "B6";
-  let muttonFat = "21g";
-
-  let pomoTitle = "Pomogranate";
-  let pomoCal = 83;
-  let pomoCarb = "14gm";
-  let pomoVit = "C,K";
-  let pomoFat = "1gm";
-
-  let potatoTitle = "Potato";
-  let potatoCal = 87;
-  let potatoCarb = "17gm";
-  let potatoVit = "C,B1,B3,B6";
-  let potatoFat = "0gm";
-
-  let cabbageTitle = "Cabbage";
-  let cabbageCal = 25;
-  let cabbageCarb = "6gm";
-  let cabbageVit = "C,K,B6";
-  let cabbageFat = "0.1g";
-
-  let cdTitle = "Cold Drink";
-  let cdCal = 37;
-  let cdCarb = "9.56gm";
-  let cdVit = "-";
-  let cdFat = "0.02gm";
-
-  let saladTitle = "Salad";
-  let saladCal = 17;
-  let saladCarb = "2.9gm";
-  let saladVit = "C,D,A";
-  let saladFat = "0.24gm";
+ 
 
   return (
     <div>
@@ -243,7 +181,7 @@ export const Diet = () => {
           Height(in cm)
         </label>
         <div className="col-sm-10">
-          <input type="number" className="form-control" id="inputHeight" />
+          <input type="number" className="form-control " id="inputHeight"  required/>
         </div>
       </div>
       <div className="m-1 row gender-label">
@@ -251,7 +189,7 @@ export const Diet = () => {
           Weight(in kg)
         </label>
         <div className="col-sm-10">
-          <input type="number" className="form-control" id="inputWeight" />
+          <input type="number" className="form-control" id="inputWeight" required />
         </div>
       </div>
       <div className="m-1 row gender-label">
@@ -284,7 +222,7 @@ export const Diet = () => {
       <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Rice</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="1" />&nbsp;Rice</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -313,7 +251,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Dal</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="2"/>&nbsp;Dal</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -342,7 +280,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chapati</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="3"/>&nbsp;Chapati</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -376,7 +314,7 @@ export const Diet = () => {
   <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Salad</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="4" />&nbsp;Salad</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -405,7 +343,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Tea</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="5"/>&nbsp;Tea</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -434,7 +372,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Coffee</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="6"/>&nbsp;Coffee</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -466,7 +404,7 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Bread</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="7" />&nbsp;Bread</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -495,7 +433,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Noodles</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="8"/>&nbsp;Noodles</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -524,7 +462,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Pasta</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="9"/>&nbsp;Pasta</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -556,7 +494,7 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Milk</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="10" />&nbsp;Milk</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -585,7 +523,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Curd</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="11"/>&nbsp;Curd</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -614,7 +552,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Chips</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="12"/>&nbsp;Chips</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -646,7 +584,7 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Cold Drink</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="13" />&nbsp;Cold Drink</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -675,7 +613,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Chicken</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="14"/>&nbsp;Chicken</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -704,7 +642,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Egg</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="15"/>&nbsp;Egg</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -736,7 +674,7 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Fish</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="16" />&nbsp;Fish</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -765,7 +703,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Mutton</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="17"/>&nbsp;Mutton</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -794,7 +732,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Pizza</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="18"/>&nbsp;Pizza</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -826,7 +764,7 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Burger</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="19" />&nbsp;Burger</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -855,7 +793,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Sweets</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="20"/>&nbsp;Sweets</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -884,7 +822,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Apple</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="21"/>&nbsp;Apple</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -915,7 +853,7 @@ export const Diet = () => {
     {/* eigth */} <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Orange</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="22" />&nbsp;Orange</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -944,7 +882,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Banana</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="23"/>&nbsp;Banana</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -973,7 +911,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Pomogranate</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="24"/>&nbsp;Pomogranate</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -1005,7 +943,7 @@ export const Diet = () => {
     <div className="row align-items start">
       <div class="card border-primary mb-3 col details">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />&nbsp;Paneer</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="25" />&nbsp;Paneer</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -1034,7 +972,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck2"/>&nbsp;Potato</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="26"/>&nbsp;Potato</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -1063,7 +1001,7 @@ export const Diet = () => {
       </div>
       <div class="card border-primary mb-3 col">
         <div class="card-header ">
-          <h2 className><input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>&nbsp;Cabbage</h2>
+          <h2 className><input class="form-check-input" type="checkbox" value="" id="27"/>&nbsp;Cabbage</h2>
         </div>
         <div class="card-body text-primary">
           <table class="table">
@@ -1092,9 +1030,11 @@ export const Diet = () => {
       </div>
     </div>
   <br />
-     <a className="final" onClick={handleClickbmi}>SUBMIT</a>
+     <a className="final" onClick={calcCal}>SUBMIT</a>
   
      <br />
+     <div id="final-calorie"></div>
+     <div id="final-suggestions"></div>
     </div>
   );
 };

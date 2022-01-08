@@ -85,37 +85,47 @@ code {
     margin-top: 10px;
     column-gap: 20px;
 }
-#display-total{
+
+#display-total {
     font-weight: 700;
     font-size: 50px;
-  }
-  h1{
+}
+
+h1 {
     color: crimson;
-  }
-  .title{
+}
+
+.title {
     font-size: 100px;
     text-align: center;
-    }
-  .sym-col{
-        color: rgb(235, 0, 0);
-        font-size: 50px;
-    }
-  .gender-label{
-        color: rgb(144, 61, 240);
-        font-size:x-large;
-        font-weight:800;
-    }
-  .gender-label div{
-        color: rgb(59, 85, 97);
-        font-size: large;
-    }
-  #inputHeight,#inputWeight{
-        width:20%;
-    }
-  #bmi{
-      font-size: 5-rem;
-    }
-.final{
+}
+
+.sym-col {
+    color: rgb(235, 0, 0);
+    font-size: 50px;
+}
+
+.gender-label {
+    color: rgb(144, 61, 240);
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.gender-label div {
+    color: rgb(59, 85, 97);
+    font-size: large;
+}
+
+#inputHeight,
+#inputWeight {
+    width: 20%;
+}
+
+#bmi {
+    font-size: 5-rem;
+}
+
+.final {
     text-align: center;
     margin-left: 650px;
     padding: 10px;
@@ -125,4 +135,20 @@ code {
     width: 110px;
     text-decoration: none;
     font-weight: 800;
+}
+
+#final-suggestions {
+    text-align: center;
+    color: firebrick;
+    font-size: 4rem;
+    /* margin-left: 590px; */
+    font-weight: 900;
+}
+
+#final-calorie {
+    font-weight: 800;
+    margin-top: 40px;
+    font-size: 40px;
+    margin-left: 400px;
+    color: goldenrod;
 }

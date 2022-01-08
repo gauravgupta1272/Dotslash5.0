@@ -2,6 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Project Details:
+
+Name of the Project is : thriveU
+It is based on the theme Personal Growth And Well-Being
+
+It allows the user to enter Height, Weight, Gender and Food items consumed by the user.
+According to it total calorie intake will be calculated and results will be shown to the user.
+
+Along with this feature user also gets the option to monitor the Screen Time and see suggestions.
+
+thriveU and Stay Fit...
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
