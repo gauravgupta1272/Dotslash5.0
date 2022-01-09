@@ -1,10 +1,13 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# thriveU
 
 Project Details:
 
 Name of the Project is : thriveU
+
+Tech stacks : ReactJS, html and Css
+
+Project Explaination:
+
 It is based on the theme Personal Growth And Well-Being
 
 It allows the user to enter Height, Weight, Gender and Food items consumed by the user.
@@ -16,6 +19,7 @@ thriveU and Stay Fit...
 
 
 
+# Getting started with React App
 
 ## Available Scripts
 
