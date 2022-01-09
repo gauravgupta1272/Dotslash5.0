@@ -25,7 +25,7 @@ export const ScreenTime = () => {
   let getTotal = (e) => {
     e.preventDefault();
     // parseInt(total, parseInt(mp) + parseInt(pc) + parseInt(tv) + parseInt(oth));
-    document.getElementById("display-total").innerHTML = 
+    document.getElementById("display-total1").innerHTML = 
       parseInt(mp) + parseInt(pc) + parseInt(tv) + parseInt(oth);
     // console.log(parseInt(mp) + parseInt(pc) + parseInt(tv) + parseInt(oth))
 
@@ -136,9 +136,9 @@ export const ScreenTime = () => {
         {/* <div id="display-total"></div> */}
         
       </div>
-      <div className="card suggestions" >
+      <div className="card-1 suggestions1" >
        <h3>Your Total Screen Time is </h3> (in hours)
-          <div className="card-body" id="display-total"></div>
+          <div className="card-body" id="display-total1"></div>
       <div id="suggestion-blogs-title"></div>
       <div id="suggestion-blogs"></div>
       </div>

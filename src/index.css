@@ -59,12 +59,12 @@ code {
     background-color: rgba(173, 216, 230, 0.63);
 }
 
-.suggestions {
+.suggestions1 {
     text-align: center;
     background-color: rgba(173, 216, 230, 0.479);
 }
 
-#display-total {
+#display-total1 {
     font-weight: 700;
     font-size: 50px;
 }
